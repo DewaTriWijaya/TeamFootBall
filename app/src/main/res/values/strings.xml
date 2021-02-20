@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TeamFootBall</string>
+    <string name="img_screen">img screen</string>
+
+    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="img">img ball</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_favorite">Favorite</string>
+
+    <string name="name">Name</string>
+    <string name="stadium">Stadium</string>
+
+    <string name="copyright">Copyright@DewaTriWijaya</string>
+    <string name="data_error">Data Error</string>
+    <string name="description">Description</string>
+
+</resources>
