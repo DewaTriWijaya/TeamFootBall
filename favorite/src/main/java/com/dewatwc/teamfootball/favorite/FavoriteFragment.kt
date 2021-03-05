@@ -12,6 +12,7 @@ import com.dewatwc.teamfootball.ui.detail.DetailActivity
 import kotlinx.android.synthetic.main.fragment_favorite.*
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.context.loadKoinModules
+import org.koin.core.context.unloadKoinModules
 
 class FavoriteFragment : Fragment() {
 
@@ -40,6 +41,7 @@ class FavoriteFragment : Fragment() {
 
             favoriteViewModel.favoriteTeam.observe(viewLifecycleOwner, { data ->
                 teamAdapter.setData(data)
+                view_empty.visibility = if (data.isNotEmpty()) View.GONE else View.VISIBLE
             })
 
             with(rv_favorite) {
@@ -48,6 +50,11 @@ class FavoriteFragment : Fragment() {
                 adapter = teamAdapter
             }
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        unloadKoinModules(favoriteModule)
     }
 
 }
