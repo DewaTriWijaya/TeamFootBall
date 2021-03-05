@@ -72,8 +72,8 @@ class DrawerActivity : AppCompatActivity() {
         registerBroadCastReceiver()
     }
 
-//    override fun onStop() {
-//        super.onStop()
-//        unregisterReceiver(broadcastReceiver)
-//    }
+   override fun onStop() {
+       super.onStop()
+       unregisterReceiver(broadcastReceiver)
+   }
 }
